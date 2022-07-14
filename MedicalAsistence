@@ -1,0 +1,33 @@
+drop table if exists medicos;
+
+create table medicos(
+    id serial primary key,
+    nombre varchar(255) not null,
+    apellido varchar(255) not null,
+    n_matricula int not null,
+    especialidad varchar(50)
+);
+
+drop table if exists pacientes;
+
+create table pacientes(
+    id serial primary key,
+    nombre varchar(255) not null,
+    apellido varchar(255) not null,
+    rut varchar not null,
+    telefono int not null
+);
+
+select * from medicos;
+
+insert into medicos (nombre, apellido, n_matricula, especialidad) values ('Carlos', 'Lopez', '11', 'Dentista'),
+('Pablo', 'Rojas', '13', 'Medicina General'), ('Paulina', 'Vasquez', '22', 'Pediatria'), ('Johanna', 'Caceres', '132', 'Obstetricia'),
+('Felipe', 'Fuente', '66', 'Cirujano');
+
+select * from pacientes;
+
+insert into pacientes (nombre, apellido, rut, telefono) values ('Javiera', 'Briceno', '1232323-5', '23324324'), ('Manuel', 'Rodriguez', '21321443-2', '9873647'),
+('Carlos', 'Fuentes', '29838289-6', '98746572'), ('Wladimir', 'Mix', '1728372-6', '92763452'), ('Fernanda', 'Neculpan', '19387484-5', '94564564'),
+('Andres', 'Arriagada', '17872837-4', '2234534'), ('Danny', 'Loyola', '18239254-7', '2345335'), ('Maria', 'Guzman', '8782738-6', '23453324'), ('Leonardo', 'Penailillo', '18239823-6', '23542423'),
+('Patricio', 'Farias', '16212345-7', '23245654');
+
